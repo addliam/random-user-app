@@ -1,47 +1,56 @@
-<p>user-profile works!</p>
-<div *ngIf="userData">
-    <img width="128px" height="128px" src={{userData.picture.large}} alt="profile picture">
-    <ul>
-        <li class="font-semibold text-lg">Personal Information</li>
-        <li>
-            <span class="font-semibold">Name: </span> {{userData.name.first+" "+userData.name.last}}
-        </li>
-        <li>
-            <span class="font-semibold">Gender: </span> {{userData.gender}}
-        </li>
-        <li>
-            <span class="font-semibold">Birthday: </span> {{userData.dob.date | date:"MM/dd/yyyy"}}
-        </li>
-        <li>
-            <span class="font-semibold">Age: </span> {{userData.dob.age}}
-        </li>
-    </ul>
-    <ul>
-        <li class="font-semibold text-lg">Location</li>
-        <li>
-            <span class="font-semibold">Country: </span> {{userData.location.country}}
-        </li>
-        <li>
-            <span class="font-semibold">City: </span> {{userData.location.city}}
-        </li>
-        <li>
-            <span class="font-semibold">State: </span> {{userData.location.state}}
-        </li>
-        <li>
-            <span class="font-semibold">Street: </span> {{userData.location.street.name+" "+userData.location.street.number}}
-        </li>
-    </ul>
-    <ul>
-        <li class="font-semibold text-lg">Contact</li>
-        <li>
-            <span class="font-semibold">Email: </span> {{userData.email}}
-        </li>
-        <li>
-            <span class="font-semibold">Phone: </span> {{userData.phone}}
-        </li>
-        <li>
-            <span class="font-semibold">Cell: </span> {{userData.cell}}
-        </li>
-    </ul>
-
-</div>
+<section *ngIf="userData" class="flex flex-col justify-center items-center w-full border-2 border-black ">
+    <div class="flex flex-row gap-6">
+        <div class="left-side bg-[#caf0f8] text-[#001233] px-4 py-4 rounded-[8px]">
+            <div class="px-4 py-4">
+                <img class="rounded-[50%]" width="128px" height="128px" src={{userData.picture.large}} alt="profile picture">
+            </div>
+            <ul>
+                <li class="font-semibold text-lg text-black">Personal Information</li>
+                <li>
+                    <span class="font-semibold">Name: </span> {{userData.name.first+" "+userData.name.last}}
+                </li>
+                <li>
+                    <span class="font-semibold">Gender: </span> {{userData.gender}}
+                </li>
+                <li>
+                    <span class="font-semibold">Birthday: </span> {{userData.dob.date | date:"MM/dd/yyyy"}}
+                </li>
+                <li>
+                    <span class="font-semibold">Age: </span> {{userData.dob.age}}
+                </li>
+            </ul>
+        </div>
+        <div class="right-side bg-[#caf0f8] text-[#001233] px-4 py-4 rounded-[8px]">
+            <ul>
+                <li class="font-semibold text-lg text-black">Location</li>
+                <li>
+                    <span class="font-semibold">Country: </span> {{userData.location.country}}
+                </li>
+                <li>
+                    <span class="font-semibold">City: </span> {{userData.location.city}}
+                </li>
+                <li>
+                    <span class="font-semibold">State: </span> {{userData.location.state}}
+                </li>
+                <li>
+                    <span class="font-semibold">Street: </span> {{userData.location.street.name+" "+userData.location.street.number}}
+                </li>
+            </ul>
+            <ul class="mt-2">
+                <li class="font-semibold text-lg text-black">Contact</li>
+                <li>
+                    <span class="font-semibold">Email: </span> {{userData.email}}
+                </li>
+                <li>
+                    <span class="font-semibold">Phone: </span> {{userData.phone}}
+                </li>
+                <li>
+                    <span class="font-semibold">Cell: </span> {{userData.cell}}
+                </li>
+            </ul>
+        </div>
+    </div>    
+    <div class="button-wrapper mt-6">
+        <button class="bg-orange hover:bg-orangeContrast text-white px-4 py-2 rounded-3xl" type="button" (click)="getRandomUser()" >Get other user</button>
+    </div>
+</section>

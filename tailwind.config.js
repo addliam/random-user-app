@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         orange: "#fb8500",
+        orangeContrast: "#F48100",
         yellow: "#ffb703",
         darkBlue: "#023047",
         turquoise: "#219ebc",

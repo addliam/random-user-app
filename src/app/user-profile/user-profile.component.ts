@@ -11,12 +11,17 @@ export class UserProfileComponent implements OnInit {
   userData?:User;
   constructor(private apiService: ApiService) { }
 
-  ngOnInit(): void {
+  getRandomUser(): void{
+    console.log("Getting random user");
     this.apiService.getRandomUser()
       .subscribe((data: any) => {
         console.log(data.results[0] as User)
         this.userData = data.results[0];
       });
+  }
+
+  ngOnInit(): void {
+    this.getRandomUser()
   }
 
 }
