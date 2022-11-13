@@ -7,19 +7,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blackDark: "#1D242E",
-        blackPrimary: "#283342",
-        blackContrast: "#009099",
-        white: "#FFFFFF",
-        black: "#1D242E",
-        blackOverlay: "rgba(29, 36, 46, 0.5)",
-        yellow: "#FED600",
-        orange: "#F0483E",
-        orangeContrast: "#E0443B",
-        red: "#F0483E",
-        skyBlue: "#03A9F5",
-        green: "#01A768",
-        whiteGray: "#EDF1F5"
+        orange: "#fb8500",
+        yellow: "#ffb703",
+        darkBlue: "#023047",
+        turquoise: "#219ebc",
+        skyBlue: "#8ecae6",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
