@@ -13,6 +13,7 @@ module.exports = {
         darkBlue: "#023047",
         turquoise: "#219ebc",
         skyBlue: "#8ecae6",
+        lightBlue: "#caf0f8",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

@@ -1,11 +1,11 @@
-<section *ngIf="userData" class="flex flex-col justify-center items-center w-full border-2 border-black ">
+<section *ngIf="userData" class="flex flex-col justify-center items-center w-full mt-12">
     <div class="flex flex-row gap-6">
-        <div class="left-side bg-[#caf0f8] text-[#001233] px-4 py-4 rounded-[8px]">
+        <div class="left-side bg-lightBlue text-[#363636] px-4 py-4 rounded-[8px]">
             <div class="px-4 py-4">
-                <img class="rounded-[50%]" width="128px" height="128px" src={{userData.picture.large}} alt="profile picture">
+                <img class="rounded-[50%] mx-auto" width="128px" height="128px" src={{userData.picture.large}} alt="profile picture">
             </div>
             <ul>
-                <li class="font-semibold text-lg text-black">Personal Information</li>
+                <li class="font-semibold text-lg text-[#0a766b]">Personal Information</li>
                 <li>
                     <span class="font-semibold">Name: </span> {{userData.name.first+" "+userData.name.last}}
                 </li>
@@ -20,9 +20,9 @@
                 </li>
             </ul>
         </div>
-        <div class="right-side bg-[#caf0f8] text-[#001233] px-4 py-4 rounded-[8px]">
+        <div class="right-side bg-lightBlue text-[#363636] px-4 py-4 rounded-[8px]">
             <ul>
-                <li class="font-semibold text-lg text-black">Location</li>
+                <li class="font-semibold text-lg text-[#0a766b]">Location</li>
                 <li>
                     <span class="font-semibold">Country: </span> {{userData.location.country}}
                 </li>
@@ -37,7 +37,7 @@
                 </li>
             </ul>
             <ul class="mt-2">
-                <li class="font-semibold text-lg text-black">Contact</li>
+                <li class="font-semibold text-lg text-[#0a766b]">Contact</li>
                 <li>
                     <span class="font-semibold">Email: </span> {{userData.email}}
                 </li>
