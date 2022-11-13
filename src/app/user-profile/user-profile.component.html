@@ -1,1 +1,47 @@
 <p>user-profile works!</p>
+<div *ngIf="userData">
+    <img width="128px" height="128px" src={{userData.picture.large}} alt="profile picture">
+    <ul>
+        <li class="font-semibold text-lg">Personal Information</li>
+        <li>
+            <span class="font-semibold">Name: </span> {{userData.name.first+" "+userData.name.last}}
+        </li>
+        <li>
+            <span class="font-semibold">Gender: </span> {{userData.gender}}
+        </li>
+        <li>
+            <span class="font-semibold">Birthday: </span> {{userData.dob.date | date:"MM/dd/yyyy"}}
+        </li>
+        <li>
+            <span class="font-semibold">Age: </span> {{userData.dob.age}}
+        </li>
+    </ul>
+    <ul>
+        <li class="font-semibold text-lg">Location</li>
+        <li>
+            <span class="font-semibold">Country: </span> {{userData.location.country}}
+        </li>
+        <li>
+            <span class="font-semibold">City: </span> {{userData.location.city}}
+        </li>
+        <li>
+            <span class="font-semibold">State: </span> {{userData.location.state}}
+        </li>
+        <li>
+            <span class="font-semibold">Street: </span> {{userData.location.street.name+" "+userData.location.street.number}}
+        </li>
+    </ul>
+    <ul>
+        <li class="font-semibold text-lg">Contact</li>
+        <li>
+            <span class="font-semibold">Email: </span> {{userData.email}}
+        </li>
+        <li>
+            <span class="font-semibold">Phone: </span> {{userData.phone}}
+        </li>
+        <li>
+            <span class="font-semibold">Cell: </span> {{userData.cell}}
+        </li>
+    </ul>
+
+</div>
