@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-user-profile',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-
-  constructor() { }
+  userData:any;
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.apiService.getRandomUser()
+      .subscribe((data) => {
+        console.log(data)
+        this.userData = data
+      });
   }
 
 }
